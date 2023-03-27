@@ -1,0 +1,144 @@
+@font-face {
+    font-family: poppins;
+    src: url(../assets/Poppins/Poppins-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+#container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(50px);
+}
+
+#container section {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.power-button{
+    margin-top: 20px;
+}
+
+#checkbox {
+    display: none;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.checkbox-label::before {
+    content: '';
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    box-sizing: border-box;
+    border: 2px solid #ffff;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: .3s ease-in-out;
+}
+
+#checkbox:checked + .checkbox-label::before {
+    background-color: #07bdac;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='60' viewBox='0 0 50 60'%3E%3Cpath fill='%23FFFFFF' d='M17.6,36.7L8.9,28c-0.6-0.6-1.6-0.6-2.2,0c-0.6,0.6-0.6,1.6,0,2.2l10.5,10.5c0.6,0.6,1.6,0.6,2.2,0l21.5-21.5 c0.6-0.6,0.6-1.6,0-2.2c-0.6-0.6-1.6-0.6-2.2,0L17.6,36.7z'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.power-button {
+    width: 6.8rem;
+    height: 3rem;
+    background-color: azure;
+    border-radius: 32px;
+}
+
+#powerbutton {
+    display: none;
+}
+
+.toggle {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(113, 0, 0);
+    border: 1px solid #dedede;
+    border-radius: 32px;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: .3s cubic-bezier(0.895, 0.07, 0.685, 0.68);
+}
+
+.toggle::before {
+    content: 'On';
+    color: white;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 0;
+    top: 14px;
+    left: 12px;
+}
+
+.toggle::after {
+    content: 'off';
+    color: white;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 14px;
+    top: 14px;
+    left: 10px;
+}
+
+#powerbutton:checked + .toggle {
+    left: 3.7rem;
+    background-color: #07bdac;
+}
+
+#powerbutton:checked + .toggle::after {
+    font-size: 0;
+}
+
+#powerbutton:checked + .toggle::before {
+    font-size: 14px;
+}
+
