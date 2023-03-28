@@ -142,3 +142,59 @@ body {
     font-size: 14px;
 }
 
+#coffeswitch {
+    display: none;
+}
+
+.coffe-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.7rem;
+    height: 5rem;
+    background-color: #3d2c1d;
+    box-shadow: 0px 0px 0px 3px rgb(223, 222, 222);
+    margin-top: 25px;
+    border-radius: 43px;
+}
+
+.switch span {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 9.7rem;
+    height: 5rem;
+    background: url(../assets/coffe1.png);
+    background-size: auto 5rem;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    transition: 1s;
+    transform: rotate(180deg);
+    transform-origin: 2.3rem;   
+}
+
+#coffeswitch:checked + .switch span {
+    left: 4.8rem;
+    transform: rotate(-360deg);
+    background: url(../assets/coffe2.png);
+    background-size: auto 5rem;
+    background-repeat: no-repeat;
+}
+
+.coffe-switch p {
+    text-transform: uppercase;
+    margin: 0 30px 0 30px;
+    color: white;
+    font-weight: 700;
+}
+
+#coffeswitch:not(:checked) + p:first-child {
+    filter: drop-shadow(0 0 6px white);
+}
+
+#coffeswitch:checked ~ p:last-child {
+    filter: drop-shadow(0 0 6px white);
+}
+
+
