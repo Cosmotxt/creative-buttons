@@ -4,7 +4,7 @@
 }
 
 * {
-    padding: 0;
+    padding: 0;  
     margin: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
@@ -122,10 +122,10 @@ body {
 .toggle::after {
     content: 'off';
     color: white;
-    position: absolute;
+    position: relative  ;
     text-transform: uppercase;
     font-size: 14px;
-    top: 14px;
+    top: 10.5px;
     left: 10px;
 }
 
